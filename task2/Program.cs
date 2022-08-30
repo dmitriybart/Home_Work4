@@ -1,6 +1,6 @@
 ﻿// Написать программу масштабирования фигуры
 
-void PrintCoord (int[] arrayX, int[]arrayY, int position)
+void PrintCoord (double[] arrayX, double[]arrayY, int position)
 {
     for(int i = 0; i < position; i++)
 {
@@ -10,22 +10,22 @@ Console.WriteLine();
 }
 Console.Write("Введите количество углов фигуры: ");
 int count = int.Parse(Console.ReadLine() ?? "0");
-int[] countFigureX = new int [count];
-int[] countFigureY = new int [count];
+double[] countFigureX = new double [count];
+double[] countFigureY = new double [count];
 for(int i = 0; i < count; i++)
 {
     Console.WriteLine($"Введите {i+1}-ю точку: ");
     Console.Write("Х = ");
-    countFigureX[i] = int.Parse(Console.ReadLine() ?? "0");
+    countFigureX[i] = double.Parse(Console.ReadLine() ?? "0");
     Console.Write("Y = ");
-    countFigureY[i] = int.Parse(Console.ReadLine() ?? "0");
+    countFigureY[i] = double.Parse(Console.ReadLine() ?? "0");
     
 }
 Console.Write("Координаты вершин фигуры: ");
 PrintCoord(countFigureX, countFigureY, count);
 
 Console.Write("Введите коэфицент масштабирования: ");
-int koeffMashtab = int.Parse(Console.ReadLine() ?? "0");
+double koeffMashtab = double.Parse(Console.ReadLine() ?? "0");
 
 for(int i = 0; i < count; i++)
 {
